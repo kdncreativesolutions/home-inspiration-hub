@@ -245,12 +245,14 @@
 .feature-grid h3 { font-family: var(--font-sans); font-size: 13px; font-weight: 600; }
 .feature-grid p { font-size: 11px; color: var(--muted-foreground); margin-top: 7px; }
 .gallery-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
-.gallery-item { position: relative; height: 365px; border-radius: 4px; overflow: hidden; padding: 0; text-align: left; width: 100%; }
+.gallery-item { position: relative; height: 365px; border-radius: 4px; overflow: hidden; padding: 0; text-align: left; width: 100%; white-space: normal; }
 .gallery-item::after { content: ""; position: absolute; inset: 0; background: var(--photo-shade); }
 .gallery-caption { position: absolute; bottom: 22px; left: 22px; right: 22px; z-index: 1; color: var(--hero-foreground); display: flex; justify-content: space-between; align-items: end; }
 .gallery-caption small { color: var(--hero-muted); font-size: 9px; text-transform: uppercase; letter-spacing: 1px; }
 .gallery-caption strong { font-family: var(--font-display); font-weight: 500; display: block; font-size: 26px; margin-top: 5px; }
 .gallery-item svg { width: 20px; height: 20px; }
+.gallery-caption > div { min-width: 0; padding-right: 10px; }
+.gallery-caption > svg { flex-shrink: 0; }
 .process-step { position: relative; border-top: 1px solid var(--border); padding-top: 24px; }
 .process-step::before { content: ""; position: absolute; width: 7px; height: 7px; border-radius: 50%; top: -4px; left: 0; background: var(--primary); }
 .process-step .step-number { font-family: var(--font-display); font-size: 54px; line-height: 1; color: var(--primary); }
@@ -288,6 +290,7 @@
   .intro-stat { padding-inline: 18px; gap: 12px; }
 }
 @media (max-width: 767px) {
+  .desktop-nav { display: none; }
   .container-editorial { width: calc(100% - 40px); }
   .section-space { padding-block: 64px; }
   h2 { font-size: 40px; }

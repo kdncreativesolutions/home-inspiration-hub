@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, CheckCheck, ChevronLeft, ChevronRight, Clock3, Facebook, Hammer, HeartHandshake, House, Instagram, Mail, MapPin, Menu, MessageSquare, Phone, Plus, Ruler, ShieldCheck, Star, X } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, CheckCheck, ChevronLeft, ChevronRight, Clock3, Facebook, Hammer, HeartHandshake, House, Instagram, Mail, MapPin, Menu, MessageSquare, Phone, Plus, ShieldCheck, Star } from "lucide-react";
 import { Toaster } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
@@ -9,7 +9,7 @@ import { ContactForm } from "./contact-form";
 
 function Reveal({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const reduced = useReducedMotion();
-  return <motion.div className={className} initial={false} whileInView={reduced ? undefined : { opacity: [0.65, 1], y: [14, 0] }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.65, delay, ease: "easeOut" }}>{children}</motion.div>;
+  return <motion.div className={className} initial={false} whileInView={reduced ? {} : { opacity: [0.65, 1], y: [14, 0] }} viewport={{ once: true, amount: 0.12 }} transition={{ duration: 0.65, delay, ease: "easeOut" }}>{children}</motion.div>;
 }
 function Wordmark() {
   return <a className="wordmark w-fit" href="#home" aria-label="Adorini Homes home">ADORINI<span>HOMES</span></a>;
