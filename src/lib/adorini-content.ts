@@ -8,7 +8,7 @@ export const business = {
   name: "Adorini Homes", phone: "0403 256 710", phoneLink: "tel:0403256710",
   email: "adorinihomes@gmail.com", hours: "Monday–Friday, 8:00am–6:00pm",
   instagram: "https://www.instagram.com/adorinihomes/",
-  facebook: "https://www.facebook.com/adorinihomes",
+  facebook: "https://www.facebook.com/profile.php?id=61564976441961",
   tagline: "Your vision. Our foundation.",
 };
 export const images = {
